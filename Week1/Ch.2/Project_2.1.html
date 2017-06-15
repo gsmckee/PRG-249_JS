@@ -1,9 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Calculate Average</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function performCalc(in1, in2, in3, in4, in5)
+		{
+			var result = (in1 + in2 + in3 + in4 + in5)/5;
+			return result;
+		}
+		function calcAvg()
+		{
+			var i1 = document.getElementById("i1");
+			var i2 = document.getElementById("i2");
+			var i3 = document.getElementById("i3");
+			var i4 = document.getElementById("i4");
+			var i5 = document.getElementById("i5");
+
+			var v1= parseInt(i1.value);
+			var v2= parseInt(i2.value);
+			var v3= parseInt(i3.value);
+			var v4= parseInt(i4.value);
+			var v5= parseInt(i5.value);
+			
+			performCalc(v1, v2, v3, v4, v5);
+			var calcRes = performCalc(v1, v2, v3, v4, v5);
+			document.getElementById("average").value = calcRes.toString();
+			//return average;
+		}
+	</script>
 </head>
 <body>
-
+	<h1>Project 2.1</h1>
+	<h2>Average Calculator</h2>
+	<form id="f1">
+		<table>
+			<tr>
+				<td><input type="number" name="i1" id="i1" value="0" onchange="calcAvg()"></td>
+				<td><input type="number" name="i2" id="i2" value="0" onchange="calcAvg()"></td>
+				<td><input type="number" name="i3" id="i3" value="0" onchange="calcAvg()"></td>
+				<td><input type="number" name="i4" id="i4" value="0" onchange="calcAvg()"></td>
+				<td><input type="number" name="i5" id="i5" value="0" onchange="calcAvg()"></td>
+			</tr>
+		</table>
+		<br/>
+		Average= <input type="text" id="average" value="0" readonly="readonly">
+	</form>
 </body>
 </html>
