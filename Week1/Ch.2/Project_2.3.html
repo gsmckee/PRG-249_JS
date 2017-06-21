@@ -15,9 +15,46 @@
 		
 			var calcBMI = (v1/(v2*v2))*v3;
 			//return body mass index
-			document.getElementById("result").value = calcBMI.toString();
+			document.getElementById("result").value = calcBMI.toString().match(/^-?\d+(?:\.\d{0,2})?/);
 			
 		}
+
+		// Key press function event
+
+		function onKeyPress(event)
+		{
+			if(characterCode == 13)
+		{
+		    return false; // returning false will prevent the event from bubbling up.
+		}
+		else
+		{
+		    return true;
+		}
+			var event = event.keycode;
+			if (event == 13)
+				calcAvg();
+		}
+
+		// clear textboxes onClick.
+
+		function clear_text(id)
+		{
+			//var id = id;
+			window.alert("you called me");
+			if(id == i1)
+			{
+				document.getElementById("i1").value = " ";
+			}
+			else if (id == i2)
+			{
+				document.getElementById("i2").value = " ";
+			}
+		}
+		/*function clear_text2()
+		{
+			document.getElementById("i2").value = " ";
+		}*/
 	</script>
 </head>
 <body>
@@ -27,11 +64,11 @@
 		<table>
 			<tr>
 				<td>Your weight in lbs:</td>
-				<td><input type="number" name="i1" id="i1" value="0"></td>
+				<td><input type="number" name="i1" id="i1" value="0" onfocus="clear_text(this)"></td>
 			</tr>
 			<tr>
 				<td>Your height in inches:</td>
-				<td><input type="number" name="i2" id="i2" value="0"></td>
+				<td><input type="number" name="i2" id="i2" value="0" onfocus="clear_text(this)"></td>
 			</tr>
 		</table>
 		<br/>
