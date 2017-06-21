@@ -1,10 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title></title>
+	<title>Body Mass Index Calculator</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function calcAvg()
+		{
+			var i1 = document.getElementById("i1");
+			var i2 = document.getElementById("i2");
+
+			var v1 = parseInt(i1.value);
+			var v2 = parseInt(i2.value);
+			var v3 = 703;
+		
+			var calcBMI = (v1/(v2*v2))*v3;
+			//return body mass index
+			document.getElementById("result").value = calcBMI.toString();
+			
+		}
+	</script>
 </head>
 <body>
-
-
+	<h1>Project 2.3</h1>
+	<h2>BMI Calculator</h2>
+	<form id="f1">
+		<table>
+			<tr>
+				<td>Your weight in lbs:</td>
+				<td><input type="number" name="i1" id="i1" value="0"></td>
+			</tr>
+			<tr>
+				<td>Your height in inches:</td>
+				<td><input type="number" name="i2" id="i2" value="0"></td>
+			</tr>
+		</table>
+		<br/>
+		<button type="button" onclick="calcAvg()">Calculate</button>
+		<input type="text" id="result" value="0" readonly="readonly">
+	</form>
 </body>
 </html>
