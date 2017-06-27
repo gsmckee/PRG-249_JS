@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Project 3.4</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<script type="text/javascript">
+		function LeapYear()
+		{
+			var y = parseInt(document.getElementById("year").value);
+			var res = " ";
+			if(y%4 == 0)
+			{
+				alert("The year is divisible by 4.");
+				res = "is";
+				alert(res.toString());
+
+				if(y%100 == 0)
+				{
+					alert("The year is divisible by 100...")
+					res = "is not";
+					alert(res.toString());
+
+					if(y%400 == 0)
+					{
+						alert("The year is divisible by 400...")
+						res = "is";
+						alert(res.toString());
+					}
+				}
+				document.getElementById("result").value = res.toString();
+			}
+			/*else if (y.length <= 4)
+			{
+				var y1 = parseInt(document.getElementById("year").value);
+
+				if(y %4 == 0)
+				{
+					alert("The year is divisible by 4.")
+					document.getElementById("result").value = "is";
+				}
+				else
+				{
+					alert("The year is not divisible by 4.")
+					document.getElementById("result").value = "is not";
+				}
+			}*/
+		}
+	</script>
+</head>
+<body>
+	<h1>Project 3.4</h1>
+	<h2>Leap Year Identifier</h2>
+	<p>Enter a year to identify if it is in fact a leap year.</p>
+	<form>
+		<input type="number" name="year" id="year">
+		<input type="button" value="Calculate Leap Year" id="calculate" onclick="LeapYear(this)">
+		<p>The year you entered <input type="text" name="result" id="result" readonly="readonly"> a leap year.</p>
+		<input type="reset">
+	</form>
+
+
+</body>
+</html>

@@ -1,12 +1,12 @@
 h1 {
 	font-family: Geneva, Sans-serif;
-	font-size: 20px;
+	font-size: 24px;
 	font-weight: bold;
 }
 
 h2 {
 	font-family: Times new roman, Serif;
-	font-size: 14px;
+	font-size: 18px;
 	font-weight: normal;
 }
 
@@ -16,10 +16,20 @@ td {
 }
 
 #button {
+	background-color: black;
 	font-family: Courier, Monospace;
+	color: white;
 }
 
-#result {
+#showAge {
 	background-color: grey;
-	color: white;
+    border: 0px solid;/*
+    height: 20px;
+    width: 160px;*/
+    color: white;
+}
+
+#minHR, #maxHR {
+	border: 0px solid;
+	color: green;
 }

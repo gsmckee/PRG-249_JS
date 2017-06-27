@@ -4,24 +4,26 @@
 	<title>Body Mass Index Calculator</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
-		function calcAvg()
+		function CalcBMI()
 		{
-			var i1 = document.getElementById("i1");
-			var i2 = document.getElementById("i2");
+			var v1 = parseFloat(document.getElementById("i1").value);
+			var v2 = parseFloat(document.getElementById("i2").value);
 
-			var v1 = parseInt(i1.value);
-			var v2 = parseInt(i2.value);
+			if(v2.toString().indexOf(".")!=0)
+				v2 = v2*12;
+
 			var v3 = 703;
 		
 			var calcBMI = (v1/(v2*v2))*v3;
-			//return body mass index
+
+			//return body mass index calculation
 			document.getElementById("result").value = calcBMI.toString().match(/^-?\d+(?:\.\d{0,2})?/);
 			
 		}
 
 		// Key press function event
 
-		function onKeyPress(event)
+		/*function OnKeyPress(event)
 		{
 			if(characterCode == 13)
 		{
@@ -34,14 +36,14 @@
 			var event = event.keycode;
 			if (event == 13)
 				calcAvg();
-		}
+		}*/
 
 		// clear textboxes onClick.
 
-		function clear_text(id)
+		function Clear_text(id)
 		{
-			//var id = id;
-			window.alert("you called me");
+			var id = id;
+			//window.alert("you called me");
 			if(id == i1)
 			{
 				document.getElementById("i1").value = " ";
@@ -51,10 +53,6 @@
 				document.getElementById("i2").value = " ";
 			}
 		}
-		/*function clear_text2()
-		{
-			document.getElementById("i2").value = " ";
-		}*/
 	</script>
 </head>
 <body>
@@ -64,15 +62,15 @@
 		<table>
 			<tr>
 				<td>Your weight in lbs:</td>
-				<td><input type="number" name="i1" id="i1" value="0" onfocus="clear_text(this)"></td>
+				<td><input type="number" name="i1" id="i1" value="0" onfocus="Clear_text(this)"></td>
 			</tr>
 			<tr>
 				<td>Your height in inches:</td>
-				<td><input type="number" name="i2" id="i2" value="0" onfocus="clear_text(this)"></td>
+				<td><input type="number" name="i2" id="i2" value="0" onfocus="Clear_text(this)"></td>
 			</tr>
 		</table>
 		<br/>
-		<button type="button" onclick="calcAvg()">Calculate</button>
+		<button type="button" onclick="CalcBMI()">Calculate</button>
 		<input type="text" id="result" value="0" readonly="readonly">
 	</form>
 </body>
