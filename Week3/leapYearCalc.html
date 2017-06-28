@@ -7,7 +7,7 @@
 		function LeapYear()
 		{
 			var y = parseInt(document.getElementById("year").value);
-			var res = " ";
+			var res = "is not";
 			if(y%4 == 0)
 			{
 				alert("The year is divisible by 4.");
@@ -27,8 +27,10 @@
 						alert(res.toString());
 					}
 				}
-				document.getElementById("result").value = res.toString();
 			}
+			alert("This is not a leap year");
+			document.getElementById("result").value = res.toString();
+
 			/*else if (y.length <= 4)
 			{
 				var y1 = parseInt(document.getElementById("year").value);
@@ -52,7 +54,7 @@
 	<h2>Leap Year Identifier</h2>
 	<p>Enter a year to identify if it is in fact a leap year.</p>
 	<form>
-		<input type="number" name="year" id="year">
+		<input type="number" name="year" id="year" onfocus="reset">
 		<input type="button" value="Calculate Leap Year" id="calculate" onclick="LeapYear()">
 		<p>The year you entered <input type="text" name="result" id="result" readonly="readonly"> a leap year.</p>
 		<input type="reset">
