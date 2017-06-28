@@ -12,23 +12,23 @@
 			{
 				alert("The year is divisible by 4.");
 				res = "is";
-				alert(res.toString());
+				// alert(res.toString());
 
 				if(y%100 == 0)
 				{
 					alert("The year is divisible by 100...")
 					res = "is not";
-					alert(res.toString());
+					// alert(res.toString());
 
 					if(y%400 == 0)
 					{
 						alert("The year is divisible by 400...")
 						res = "is";
-						alert(res.toString());
+						// alert(res.toString());
 					}
 				}
 			}
-			alert("This is not a leap year");
+			alert("This " + res + " a leap year");
 			document.getElementById("result").value = res.toString();
 
 			/*else if (y.length <= 4)
