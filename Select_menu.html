@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dropdown Menu</title>
+	<script type="text/javascript">
+		function onLoad()
+		{
+			var sel = -1;
+			document.getElementById("browseSel").selectedIndex = sel;
+
+		}
+		function updateSelection()
+		{
+			var sel = document.getElementById("browseSel").selectedIndex;
+
+			if (sel < 0)
+			{
+				alert("You must make a selection");
+			}
+
+			else
+			{
+				var string = document.getElementById("browseSel").options[sel].innerHTML;
+				document.getElementById("selection").value = string;
+			}
+
+		}
+		function yourSel()
+		{
+			var yourSel = new Array();
+			var idx = document.getElementById("browseSel").selectedIndex;
+			for (int i = 0; i < 10; i++)
+			{
+				yourSel[i] = ;
+			}
+		}
+
+	</script>
+</head>
+<body onload="onLoad()">
+	<form id="form1">
+		<select id="browseSel" onchange="updateSelection()">
+			<option id="alta" value="http://www.altavista.com/cgi/bin/query?kl=XX&amp;pgx=q&amp;Translate=on&amp;q=">Alta Vista</option>
+			<option id="aol" value="http://search.aol.com/dirsearch.adp?query=">AOL</option>
+			<option id="google" value="http://www.google.com/search?q=">Google</option>
+			<option id="lycos" value="http://search.lycos.com/default.asp?lpv=l&amp;loc=searchhp&amp;tab=web&amp;query=">Lycos</option>
+			<option id="yahoo" value="http://search.yahoo.com/search?p=">Yahoo!</option>
+		</select>
+		<input type="button" name="button" value="Add to my list" onclick="updateSelection()">
+		<input type="text" id="selection">
+	</form>
+	<form id="form2">
+		<select onchange="yourSel()"></select>
+		<!-- <select id="yourSel" onchange="yourSel()">
+			<option value=" "></option>
+			<option value=" "></option>
+			<option value=" "></option>
+			<option value=" "></option>
+			<option value=" "></option>
+		</select> -->
+	</form>
+
+</body>
+</html>
