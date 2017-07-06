@@ -15,6 +15,70 @@ td {
 	padding-right: 20px;
 }
 
+input#home1 {
+    background: #ccc url('home1.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#home2 {
+    background: #ccc url('home2.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#join1 {
+    background: #ccc url('join1.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#join2 {
+    background: #ccc url('join2.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#faq1 {
+    background: #ccc url('faq1.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#faq2 {
+    background: #ccc url('faq2.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#guestbook1 {
+    background: #ccc url('guestbook1.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
+input#guestbook2 {
+    background: #ccc url('guestbook2.gif');
+    background-repeat: no-repeat;
+    padding-left: auto;
+    height: 100%;
+    width: 100%;
+}
+
 #button {
 	background-color: black;
 	font-family: Courier, Monospace;

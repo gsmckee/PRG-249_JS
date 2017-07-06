@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function ConcertTicket( customer, event, quantity, eventDate ) {
+			this.customerName = customer;
+			this.eventName = event;
+			this.ticketQuantity = quantity;
+			this.dateOfEvent = eventDate;
+
+		}
+	</script>
+</head>
+<body>
+<script type="text/javascript">
+	var ticketOrder= new ConcertTicket();
+	ticketOrder.customer = "Greg";
+	ticketOrder.eventDate = new Date(2017, 7, 5);
+	ticketOrder.event = "Metallica";
+	ticketOrder.quantity = 1;
+	document.write();
+</script>
+</body>
+</html>
