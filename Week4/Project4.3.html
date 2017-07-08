@@ -4,9 +4,31 @@
 	<title>Project 4.3</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
 	<script type="text/javascript">
-		function onHover( id, image )
+		function onHover( id, img)
 		{
-			var butnId = id;
+			var btnId = id;
+			var imageTrans = img;
+				
+			alert("you called me");
+			switch(btnId)
+			{
+			case: "home1" {document.myForm.home1.src = imageTrans;}
+			break;
+
+			case: "join1" {document.getElementById("join1").src = imageTrans;}
+			break;
+
+			case: "guestbook1" {document.getElementById("guestbook1").src = imageTrans;}
+			break;
+
+			case: "faq1" {document.getElementById("faq1").src = imageTrans;}
+			break;
+
+			default: " " {}
+			break;
+
+			}
+
 			
 
 		}
@@ -17,12 +39,12 @@
 	</script>
 </head>
 <body>
-	<form>
+	<form id="myForm">
 		<ul>
-			<button><img src="home1.gif" id="home1" onfocus="onHover(this, home2.gif)"></button>
-			<button><img src="join1.gif" id="join1"></button>
-			<button><img src="guestbook1.gif" id="guestbook1"></button>
-			<button><img src="faq1.gif" id="faq1"></button>
+			<img type="button" src="home1.gif" id="home1" name="home1" onfocus="onHover( this, home2.gif )">
+			<button><img src="join1.gif" id="join1" onfocus="onHover( this, join2.gif )"></button>
+			<button><img src="guestbook1.gif" id="guestbook1" onfocus="onHover( this, guestbook2.gif )"></button>
+			<button><img src="faq1.gif" id="faq1" onfocus="onHover( this, faq2.gif )"></button>
 		</ul>
 	</form>
 </body>

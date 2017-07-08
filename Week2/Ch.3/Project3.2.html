@@ -3,39 +3,7 @@
 <head>
 	<title>Target Heart Rate</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript">
-		function CalcHeartRate()
-		{
-			var age = parseInt(document.getElementById("age").value);
-			document.getElementById("showAge").value = age.toString();
-
-			age = 220 - age;
-
-			document.getElementById("thr").value = age.toString();
-
-			var minHR = Math.round(age*.5);
-			var maxHR = Math.round(age*.85);
-
-			document.getElementById("minHR").value = minHR.toString();
-			document.getElementById("maxHR").value = maxHR.toString();
-		
-
-			//return body mass index calculation
-			//document.getElementById("result").value = calcBMI.toString().match(/^-?\d+(?:\.\d{0,2})?/);
-			
-		}
-
-		// clear textboxes onClick.
-
-		function Clear_text(id)
-		{
-			var id = id;
-			//window.alert("you called me");
-			if(id == age)
-			{
-				document.getElementById("age").value = " ";
-			}
-		}
+	<script type="text/javascript" src="jscode.js">
 	</script>
 </head>
 <body>
@@ -48,7 +16,7 @@
 				<td><input type="number" name="age" id="age" value="0" onfocus="Clear_text(this)"></td>
 			</tr>
 			<tr>
-				<td><button type="button" onclick="CalcHeartRate()">Target HR</button></td>
+				<td><button type="button" onclick="UpdateHR()">Target HR</button></td>
 				
 			</tr>
 			<tr>
