@@ -3,7 +3,21 @@
 <head>
 	<title>Target Heart Rate</title>
 	<link rel="stylesheet" type="text/css" href="style.css">
-	<script type="text/javascript" src="jscode.js">
+	<script type="text/javascript" src="Users\CCSDuser\Desktop\CCSD\PRG249\PRG249_Assignments\PRG-249_JS\Week2\Ch.3\jscode.js">
+		/*function updateHR()
+		{
+			window.alert("you called me");
+			var age = parseFloat( document.getElementById("age").value );
+			window.alert(age.value);
+			var heartRateCalc = new CalcHeartRate(age);
+			var min = heartRateCalc.minRecommended();
+			var max = heartRateCalc.maxRecommended();
+			window.alert(min + " is your minimum, and " + max + " is your max heart rate")
+			// document.getElementById("showAge").value = age.toString();
+			// document.getElementById("minHR").value = min.toString();
+			// document.getElementById("maxHR").value = max.toString();
+
+		}*/
 	</script>
 </head>
 <body>
@@ -13,10 +27,10 @@
 		<table>
 			<tr>
 				<td>Your age here:</td>
-				<td><input type="number" name="age" id="age" value="0" onfocus="Clear_text(this)"></td>
+				<td><input type="number" name="age" id="age" value="0" onfocus="Clear_text(this)"></td> <!-- /* value="0" onfocus="Clear_text(this)" */ -->
 			</tr>
 			<tr>
-				<td><button type="button" onclick="UpdateHR()">Target HR</button></td>
+				<td><button type="button" name="calcHR" onclick="updateHR()">Target HR</button></td>
 				
 			</tr>
 			<tr>

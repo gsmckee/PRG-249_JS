@@ -49,13 +49,15 @@ function getMaxRecommend()
 {
 	return this.maxRecommended;
 }
-function UpdateHR()
+function updateHR()
 {
-	var age = parseInt( document.getElementById("age").value );
+	window.alert("you called me");
+	var age = parseFloat( document.getElementById("age").value );
+	window.alert(age.value);
 	var heartRateCalc = new CalcHeartRate(age);
 	var min = heartRateCalc.minRecommended();
 	var max = heartRateCalc.maxRecommended();
-	alert(min + " is your minimum, and " + max + " is your max heart rate")
+	window.alert(min + " is your minimum, and " + max + " is your max heart rate")
 	// document.getElementById("showAge").value = age.toString();
 	// document.getElementById("minHR").value = min.toString();
 	// document.getElementById("maxHR").value = max.toString();
